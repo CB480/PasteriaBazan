@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo.jpg" type="image/x-icon">
+    <title>Pastelería Bazán</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #DA9DA3;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.jpg" alt="Logo Pastelería Bazán" style="width: 80px; border-radius: 50%;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="page/productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="page/conocenos.html">Conócenos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="page/contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero con carrusel detrás -->
+    <header class="hero position-relative">
+        <div id="heroCarousel" class="carousel slide carousel-fade w-100 h-100 position-absolute top-0 start-0" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100">
+                    <img src="img/postre.png" class="d-block w-100 h-100" style="object-fit: cover;" alt="Postre">
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="img/logss.jpg" class="d-block w-100 h-100" style="object-fit: cover;" alt="Logo">
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="img/pasteleria.jpg" class="d-block w-100 h-100" style="object-fit: cover;" alt="Pastelería">
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-center text-white">
+            <h1>Bienvenido a Pastelería Bazán</h1>
+            <p>Endulza tus momentos con nuestros pasteles artesanales, elaborados con los mejores ingredientes.</p>
+            <a href="page/productos.html" class="btn-primary">Explora nuestros productos</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section class="about container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 about-text">
+                <h2>Lo Mejor en Pastelería</h2>
+                <p>En Pastelería Bazán, nos especializamos en crear pasteles frescos y deliciosos para cualquier ocasión. Ya sea un cumpleaños, una boda o una celebración especial, tenemos el pastel perfecto para ti.</p>
+            </div>
+            <div class="col-md-6 about-image">
+                <img src="img/pasteleria.jpg" alt="Pasteles deliciosos" class="img-fluid rounded shadow" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="services py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Nuestros Servicios</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="service-item">
+                        <h3>Pedidos Especiales</h3>
+                        <p>Elabora tu pastel personalizado según tus gustos y preferencias.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item">
+                        <h3>Entrega a Domicilio</h3>
+                        <p>Haz tu pedido online y recibe tus pasteles directamente en tu hogar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-5" id="contacto">
+        <div class="footer-content container">
+            <div class="footer-section">
+                <h3>Atención al Cliente</h3>
+                <p><a href="page/contacto.html">Sugerencias</a></p>
+                <p><a href="page/libro_reclamaciones.html">Libro de Reclamaciones</a></p>
+                <p>Teléfono: 928 721 300</p>
+                <p>Email: contacto@pasteleriabazan.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Ubicación</h3>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.2094292623574!2d-76.98994429999999!3d-11.959997099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5487c8c50ff%3A0x2e9bce2d9a1fb1b4!2sParis%201588%2C%20San%20Juan%20de%20Lurigancho%2015423!5e0!3m2!1ses!2spe!4v1751733290681!5m2!1ses!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p>Paris 1588, San Juan de Lurigancho 15423</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/pasteleriabazan" target="_blank">Facebook</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.instagram.com/pasteleriabazan" target="_blank">Instagram</a>
+                </div>
+                <h3 class="mt-3">Suscríbete</h3>
+                <p>Recibe promociones exclusivas y novedades</p>
+                <div class="subscribe">
+                    <input type="email" placeholder="Ingresa tu correo" id="subscribeEmail">
+                    <button onclick="subscribeEmail()">Suscribirse</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

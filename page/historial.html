@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo.jpg" type="image/x-icon">
+    <title>Historial de Compras</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/stylepro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="../img/logo.jpg" alt="Logo Pastelería Bazán">
+        </div>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="conocenos.html">Conócenos</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección Historial -->
+    <section class="history">
+        <h2>Historial de Compras</h2>
+        <table id="history-table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Titular</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="history-body">
+                <!-- Aquí JS insertará las filas -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- Atención al Cliente -->
+            <div class="footer-section">
+                <h3>Atención al Cliente</h3>
+                <p><a href="contacto.html">Sugerencias</a></p>
+                <p><a href="Libro_Reclamaciones.html">Libro de Reclamaciones</a></p>
+                <p>Teléfono: 928 721 300</p>
+                <p>Email: contacto@pasteleriabazan.com</p>
+            </div>
+
+            <!-- Ubicación -->
+            <div class="footer-section">
+                <h3>Ubicación</h3>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.2094292623574!2d-76.98994429999999!3d-11.959997099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5487c8c50ff%3A0x2e9bce2d9a1fb1b4!2sParis%201588%2C%20San%20Juan%20de%20Lurigancho%2015423!5e0!3m2!1ses!2spe!4v1751733290681!5m2!1ses!2spe"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <p>Paris 1588, San Juan de Lurigancho 15423</p>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/pasteleriabazan" target="_blank">Facebook</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.instagram.com/pasteleriabazan" target="_blank">Instagram</a>
+                </div>
+
+                <h3 style="margin-top: 20px;">Suscríbete</h3>
+                <p>Recibe promociones exclusivas y novedades</p>
+                <div class="subscribe">
+                    <input type="email" placeholder="Ingresa tu correo" id="subscribeEmail">
+                    <button onclick="subscribeEmail()">Suscribirse</button>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">&copy; 2025 Pastelería Bazán. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../scripts/history.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

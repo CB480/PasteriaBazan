@@ -1,0 +1,464 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo de la Barra de Navegación */
+nav {
+    background-color: #DA9DA3; /* Rosa suave */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .logo img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Sección de productos */
+/* Sección de productos */
+.products {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Fondo suave para la sección */
+}
+
+.products h2 {
+    font-size: 32px;
+    color: #DA9DA3; /* Rosa suave */
+    margin-bottom: 30px;
+}
+
+/* Contenedor de las tarjetas de productos */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden en nuevas filas */
+    margin-top: 30px;
+}
+
+/* Estilo de cada tarjeta de producto */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 22%; /* Controla el tamaño de las tarjetas */
+    transition: transform 0.3s ease, background-color 0.4s ease;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 250px; /* Altura uniforme para las imágenes */
+    object-fit: cover; /* Asegura que las imágenes no se deformen */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.card .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #DA9DA3; /* Rosa suave */
+    margin-bottom: 20px;
+}
+
+.card .btn-add-to-cart {
+    padding: 10px 20px;
+    background-color: #DA9DA3;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn-add-to-cart:hover {
+    background-color: #D07D78; /* Rosa más oscuro */
+}
+
+/* Efecto de hover para las tarjetas */
+.card:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.card h3, .card p {
+    transition: color 0.3s ease;
+}
+
+/* Efecto de hover para el texto */
+.card:hover h3 {
+    color: #DA9DA3;
+}
+
+.card:hover p {
+    color: #333;
+}
+
+/* Estilo del Carrito */
+.cart {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.cart h2 {
+    font-size: 32px;
+    color: #DA9DA3; /* Rosa suave */
+    margin-bottom: 20px;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    font-size: 18px;
+    color: #333;
+}
+
+#cart-total {
+    font-size: 22px;
+    font-weight: bold;
+    color: #DA9DA3;
+    margin-bottom: 20px;
+}
+
+#clear-cart {
+    padding: 10px 20px;
+    background-color: #DA9DA3;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#clear-cart:hover {
+    background-color: #D07D78; /* Rosa más oscuro */
+}
+
+/* Estilo del carrito emergente */
+.cart-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.cart-modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.cart-modal h3 {
+    margin-bottom: 20px;
+    color: #DA9DA3; /* Rosa suave */
+}
+
+#cart-items {
+    margin-bottom: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.cart-item {
+    font-size: 18px;
+    color: #333;
+}
+
+#cart-total {
+    font-size: 22px;
+    font-weight: bold;
+    color: #DA9DA3;
+    margin-bottom: 20px;
+}
+
+.clear-btn {
+    padding: 10px 20px;
+    background-color: #DA9DA3;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-btn:hover {
+    background-color: #D07D78; /* Rosa más oscuro */
+}
+
+#cart-button {
+    padding: 10px 20px;
+    background-color: #DA9DA3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+/* Botón de enlace dentro del modal (Historial e Ir al Pago) */
+.cart-modal-content a,
+.cart-modal-content button a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Botón 'Historial' dentro del modal */
+.cart-modal-content button {
+    padding: 10px 20px;
+    background-color: #DA9DA3;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 5px; /* espacio entre botones */
+}
+
+.cart-modal-content button:hover {
+    background-color: #D07D78;
+}
+
+/* Botón 'Ir al Pago' */
+.checkout-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #DA9DA3;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 10px 5px;
+}
+
+.checkout-btn:hover {
+    background-color: #D07D78;
+}
+
+/* Alineación y separación uniforme de los botones en el modal */
+.cart-modal-content button,
+.cart-modal-content .checkout-btn {
+    margin-top: 10px;
+}
+/* Estilo del botón eliminar dentro del carrito */
+.remove-item {
+    background-color: #e74c3c; /* Color rojo para eliminar */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Espacio entre el texto y el botón */
+}
+
+/* Efecto de hover en el botón eliminar */
+.remove-item:hover {
+    background-color: #c0392b; /* Rojo más oscuro al hacer hover */
+    transform: scale(1.1); /* Efecto de ampliación al pasar el ratón */
+}
+
+/* Estilo para el botón de eliminar cuando está deshabilitado (si necesario) */
+.remove-item:disabled {
+    background-color: #bdc3c7; /* Gris para el botón deshabilitado */
+    cursor: not-allowed; /* Cursor de no permitido */
+}
+
+#cart-button:hover {
+    background-color: #D07D78; /* Rosa más oscuro */
+}
+/* Estilo para el proceso de compra */
+.checkout {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Fondo suave para la sección */
+    text-align: center;
+}
+
+.checkout h2 {
+    font-size: 32px;
+    color: #DA9DA3; /* Rosa suave */
+    margin-bottom: 20px;
+}
+
+#checkout-items {
+    margin-bottom: 20px;
+}
+
+#checkout-total {
+    font-size: 22px;
+    font-weight: bold;
+    color: #DA9DA3;
+    margin-bottom: 30px;
+}
+
+/* Formulario de pago */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+form input:focus {
+    border-color: #DA9DA3;
+    outline: none;
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: #DA9DA3;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #D07D78; /* Rosa más oscuro */
+}
+
+/* Estilos para el historial de compras */
+.history {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Fondo suave para la sección */
+}
+
+.history h2 {
+    font-size: 32px;
+    color: #DA9DA3; /* Rosa suave */
+    margin-bottom: 20px;
+}
+
+/* Estilo de la tabla de historial */
+#history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#history-table th, #history-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#history-table th {
+    background-color: #DA9DA3; /* Rosa suave */
+    color: white;
+}
+
+#history-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#history-table tr:hover {
+    background-color: #f1f1f1; /* Efecto hover en las filas */
+}
+/* Estilos Responsivos */
+@media screen and (max-width: 768px) {
+    .cards-container {
+        justify-content: center;
+    }
+
+    .card {
+        width: 80%; /* Las tarjetas ocuparán un mayor porcentaje de la pantalla */
+        margin-bottom: 20px;
+    }
+
+    .cart {
+        padding: 30px 15px;
+    }
+
+    .cart-modal-content {
+        width: 80%;
+    }
+}

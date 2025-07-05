@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo.jpg" type="image/x-icon">
+    <title>Proceso de Compra</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/stylepro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #DA9DA3;">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logo.jpg" alt="Logo Pastelería Bazán" style="width: 80px; border-radius: 50%;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="conocenos.html">Conócenos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Checkout -->
+    <section class="checkout container my-5">
+        <h2 class="mb-4">Resumen de Compra</h2>
+        <div id="checkout-items" class="mb-3"></div>
+        <p id="checkout-total">Total: S/. 0.00</p>
+
+        <!-- Formulario de Pago -->
+        <h3 class="mt-5 mb-3">Datos de Pago</h3>
+        <form id="payment-form" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre del Titular</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="card-number" class="form-label">Número de Tarjeta</label>
+                <input type="text" class="form-control" id="card-number" name="card-number" pattern="\d{16}" maxlength="16" required>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="expiry-date" class="form-label">Fecha de Expiración (MM/AA)</label>
+                    <input type="text" class="form-control" id="expiry-date" name="expiry-date" pattern="\d{2}/\d{2}" maxlength="5" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="cvv" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="cvv" name="cvv" pattern="\d{3}" maxlength="3" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-4">Realizar el Pago</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-content container">
+            <div class="footer-section">
+                <h3>Atención al Cliente</h3>
+                <p><a href="contacto.html">Sugerencias</a></p>
+                <p><a href="Libro_Reclamaciones.html">Libro de Reclamaciones</a></p>
+                <p>Teléfono: 928 721 300</p>
+                <p>Email: contacto@pasteleriabazan.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Ubicación</h3>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="200" style="border:0;" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <p>Paris 1588, San Juan de Lurigancho 15423</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/pasteleriabazan" target="_blank">Facebook</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.instagram.com/pasteleriabazan" target="_blank">Instagram</a>
+                </div>
+                <h3 class="mt-3">Suscríbete</h3>
+                <p>Recibe promociones exclusivas y novedades</p>
+                <div class="subscribe">
+                    <input type="email" placeholder="Ingresa tu correo" id="subscribeEmail">
+                    <button onclick="subscribeEmail()">Suscribirse</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/checkout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
